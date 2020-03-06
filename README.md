@@ -1,1 +1,1 @@
-# golang-githubactions
+# helloworld-go
