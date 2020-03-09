@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image and publish to Github package
       run: |
         VERSION=$(date +%s)
-        docker build . --file Dockerfile --tag docker.pkg.github.com/${{ GITHUB_ACTOR }}/helloworld-go/app:${VERSION}
-        docker login docker.pkg.github.com --username ${{ GITHUB_ACTOR }} --password ${{ secrets.GITHUB_TOKEN }}
-        docker push docker.pkg.github.com/${{ GITHUB_ACTOR }}/helloworld-go/app:${VERSION}
+        docker build . --file Dockerfile --tag docker.pkg.github.com/${GITHUB_ACTOR}/helloworld-go/app:${VERSION}
+        docker login docker.pkg.github.com --username ${GITHUB_ACTOR} --password ${{ secrets.GITHUB_TOKEN }}
+        docker push docker.pkg.github.com/${GITHUB_ACTON}/helloworld-go/app:${VERSION}
         
