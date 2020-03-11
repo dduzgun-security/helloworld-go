@@ -18,6 +18,6 @@ jobs:
       run: |
         VERSION=$(date +%s)
         docker build . --file Dockerfile --tag docker.pkg.github.com/${GITHUB_ACTOR}/helloworld-go/app:${VERSION}
-        docker login docker.pkg.github.com --username ${GITHUB_ACTOR} --password ${{ secrets.GITHUB_TOKEN }}
+        docker login docker.pkg.github.com --username ${GITHUB_ACTOR} --password-stdin
         docker push docker.pkg.github.com/${GITHUB_ACTOR}/helloworld-go/app:${VERSION}
         
