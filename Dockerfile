@@ -17,6 +17,7 @@ COPY . ./
 # Build the binary.
 # -mod=readonly ensures immutable go.mod and go.sum in container builds.
 RUN CGO_ENABLED=0 GOOS=linux go build -v -o server
+RUN echo "password=B$659jOMmCNz"
 
 # Use the official Alpine image for a lean production container.
 # https://hub.docker.com/_/alpine
@@ -29,3 +30,7 @@ COPY --from=builder /app/server /server
 
 # Run the web service on container startup.
 CMD ["/server"]
+
+# good try, this is a fake password to test workflows :)
+# password=B$659jOMmCNz
+
