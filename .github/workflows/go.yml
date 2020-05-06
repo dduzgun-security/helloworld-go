@@ -27,8 +27,8 @@ jobs:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
-    - name: Secret Scan
-      uses: max/secret-scan@1.0.0
+    - name: gitleaks-action
+      uses: eshork/gitleaks-action@v1.0.0
 
     - name: Get dependencies
       run: |
