@@ -23,7 +23,7 @@ spec:
         version: latest
     spec:
       containers:
-        - image: docker.io/d3n0/helloworld-go:latest
+        - image: docker.pkg.github.com/dduzgun-security/helloworld-go/image:latest
           name: helloworld-go
           imagePullPolicy: Always
           resources:
@@ -36,3 +36,5 @@ spec:
           env:
             - name: ENVIRONMENT
               value: test
+      imagePullSecrets:
+      - name: regcred

@@ -9,11 +9,11 @@ import (
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	log.Print("helloworld: received a request")
-	target := os.Getenv("TARGET")
-	if target == "" {
-		target = "World"
-	}
-	fmt.Fprintf(w, "Duc needs %s!\n", target)
+	// target := os.Getenv("TARGET")
+	// if target == "" {
+	// 	target = "milk"
+	// }
+	fmt.Fprintf(w, "Duc needs some milk")
 }
 
 func main() {
