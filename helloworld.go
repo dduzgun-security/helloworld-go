@@ -13,7 +13,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	if target == "" {
 		target = "World"
 	}
-	fmt.Fprintf(w, "Helloo %s!\n", target)
+	fmt.Fprintf(w, "Duc needs %s!\n", target)
 }
 
 func main() {
